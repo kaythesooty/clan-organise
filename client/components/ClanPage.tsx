@@ -2,7 +2,7 @@ import { Link, useParams } from 'react-router-dom'
 import { useClanCats } from '../hooks'
 import { EditCatForm } from './CatChangeForm'
 import { useState } from 'react'
-import { Cat, CatData, Loner } from '../../models/cats'
+import { Loner } from '../../models/cats'
 
 export function ClanPage() {
   const { clan } = useParams()

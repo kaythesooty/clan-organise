@@ -1,5 +1,5 @@
 import { ChangeEvent, FormEvent, useState } from 'react'
-import { Cat, CatData, Loner } from '../../models/cats'
+import { Loner } from '../../models/cats'
 
 interface Props {
   name: string

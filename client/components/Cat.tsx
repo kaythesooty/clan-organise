@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from 'react-router-dom'
 import { useCat } from '../hooks'
-import { ChangeEvent, useState } from 'react'
-import { Cat, CatData, Loner } from '../../models/cats'
+import { useState } from 'react'
+import { Cat, Loner } from '../../models/cats'
 import { EditCatForm } from './CatChangeForm'
 
 export function CatPage() {

@@ -1,4 +1,4 @@
-import { Cat, CatData, Clan, ClanData, Loner } from '../../models/cats'
+import { Cat } from '../../models/cats'
 import db from './connection'
 
 export async function getAllCats() {
@@ -9,7 +9,6 @@ export async function getAllCats() {
     'moons',
     'clan_id as clanId',
   )
-  // console.log("All cats", cats)
   return cats as Cat[]
 }
 
@@ -20,18 +19,15 @@ export async function getClans() {
 
 export async function getCatById(id: number) {
   const cat = await db('cats').where({ id }).first()
-  console.log(id, cat)
   return cat
 }
 
 export async function getCatsByClan(clan: string) {
   const clans = await db('clans').select('name')
   const clanList: string[] = clans.map((cln) => cln.name.toLowerCase())
-  // console.log(clanList.indexOf(clan))
   const cats = await db('cats')
     .where('clan_id', clanList.indexOf(clan) + 1)
     .select('id', 'name', 'rank', 'moons', 'clan_id as clanId')
-  console.log('cats in ' + clan, cats)
   return cats as Cat[]
 }
 

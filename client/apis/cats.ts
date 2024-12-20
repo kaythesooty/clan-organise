@@ -1,5 +1,5 @@
 import request from 'superagent'
-import { Cat, CatData, Clan, ClanData, Loner } from '../../models/cats'
+import { Cat, Clan, Loner } from '../../models/cats'
 
 // CREATE FUNCTIONS
 

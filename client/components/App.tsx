@@ -1,5 +1,4 @@
 import { useClans } from '../hooks'
-import { Clan } from '../../models/cats'
 import { Outlet } from 'react-router-dom'
 
 function App() {

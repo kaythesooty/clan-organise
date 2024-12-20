@@ -37,14 +37,6 @@ export function useClans() {
     },
   })
 }
-// export function useClanCats(clan: string) {
-//   const query = useQuery({
-//     queryKey: ['cats'],
-//     queryFn: () => {
-//       api.getClanCats(clan)
-//     },
-//   })
-// }
 
 export function useCatMutation<TData = unknown, TVariables = unknown>(
   mutationFn: MutationFunction<TData, TVariables>,
